@@ -1,0 +1,144 @@
+:root{
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body{
+  background-color: var(--Very-light-gray-background-headings-buttons);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-size: 15px;
+  
+}
+
+.container{
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  color: var(--Very-light-gray-background-headings-buttons);
+  
+}
+
+
+.left,
+.center,
+.right{
+  padding: 2rem;
+  width: 40%;
+  height: 50vh;
+
+  
+}
+.left{
+  
+  background-color: var(--Bright-orange);
+  border-radius: 10px 0 0 10px ;
+}
+
+.center{
+  background-color: var(--Dark-cyan);
+
+}
+
+.right{
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 10px 10px 0 ;
+}
+
+h2{
+  font-family: 'Big Shoulders Display', sans-serif;
+}
+
+p{
+  font-size: 14px;
+  color: var(--Transparent-white-paragraphs); 
+  width: 100%;
+  font-family: 'Lexend Deca', sans-serif;
+  height: 100px;
+}
+button{
+  margin-top: 30px;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 16px;
+}
+
+.left button{
+  color: var(--Bright-orange);
+  font-weight: 600;
+}
+
+.center button{
+  color: var(--Dark-cyan);
+  font-weight: 600;
+}
+
+.right button{
+  color: var(--Very-dark-cyan);
+  font-weight: 600;
+}
+
+button:hover{
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--Very-light-gray-background-headings-buttons);
+  color: var(--Very-light-gray-background-headings-buttons);
+}
+
+@media only screen and (max-width: 370px) {
+
+  body{
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+  }
+  .container{
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+  }
+
+  .left{
+    width: 90%;
+    border-radius: 10px 10px  0 0 ;
+  }
+
+  .center{
+    width: 90%;
+
+  }
+
+  .right{
+    width: 90%;
+    border-radius: 0 0  10px  10px ;
+  }
+
+  p{
+    height: auto;
+  }
+}
